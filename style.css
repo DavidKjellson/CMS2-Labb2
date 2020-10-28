@@ -1,3 +1,16 @@
 /*
 Theme Name: CMS2-Labb2
 */
+
+.myhero {
+  height: 300px;
+}
+
+.mydisplay {
+  /* color: white !important; */
+  text-align: center;
+}
+
+.myjumbo {
+  opacity: 0.5;
+}
