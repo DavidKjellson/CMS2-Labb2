@@ -7,13 +7,22 @@ while (have_rows('info')) {
     get_template_part('templates/info');
   }
 }
+while (have_rows('infokort')) {
+  the_row();
+  if (get_row_layout() === 'infokort') {
+    get_template_part(('templates/infocard'));
+  }
+}
 while (have_posts()) {
-  the_post(); ?>
-  <div class="card" style="width: 18rem; margin-left: 75%;">
-    <div class="card-body">
-      <p class="card-text"><?php the_content(); ?></p>
-    </div>
-  </div>
-<?php } ?>
+  the_post();
+  get_template_part('templates/twitter');
+}
+while (have_rows('sociala_medier')) {
+  the_row();
+  if (get_row_layout() === 'sociala_medier') {
+    get_template_part('templates/social-media');
+  }
+}
+?>
 
 <?php get_footer(); ?>

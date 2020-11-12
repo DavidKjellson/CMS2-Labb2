@@ -8,6 +8,7 @@ function includeStyles()
 {
   wp_enqueue_style('bootstrap-style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
   wp_enqueue_style('w3-style', 'https://www.w3schools.com/w3css/4/w3.css');
+  wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], '28october');
 }
 
