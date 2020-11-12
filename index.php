@@ -10,12 +10,14 @@ while (have_rows('info')) {
 while (have_rows('infokort')) {
   the_row();
   if (get_row_layout() === 'infokort') {
-    get_template_part(('templates/infocard'));
+    get_template_part('templates/infocard');
   }
 }
-while (have_posts()) {
-  the_post();
-  get_template_part('templates/twitter');
+while (have_rows('infokort_2')) {
+  the_row();
+  if (get_row_layout() === 'infokort_2') {
+    get_template_part('templates/infocard2');
+  }
 }
 while (have_rows('sociala_medier')) {
   the_row();

@@ -6,7 +6,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-color: <?php the_field('bakgrundsfarg'); ?>;">
   <?php while (have_rows('header')) {
     the_row(); ?>
     <div class="jumbotron myhero" style="background-image:url('<?php echo get_sub_field('bild')['url']; ?>'); background-position: center;">
